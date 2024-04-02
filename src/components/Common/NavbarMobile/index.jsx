@@ -2,8 +2,13 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React from "react";
 import { XCloseIcon } from "../../Icons";
+import { Link } from "react-router-dom";
+import { redirectToExternalUrl } from "../../../utils";
 
 export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
+  const cvUrl =
+    "https://drive.google.com/file/d/15XiXMJlkLfXVUfAOM-hVnE6XHQvjxyUu/view?usp=sharing";
+
   return (
     <Transition.Root show={sidebarOpen} as={React.Fragment}>
       <Dialog
@@ -82,9 +87,11 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
                 </div>
               </nav>
               <div className="w-full px-4 mt-3">
-                <button className="w-full bg-black rounded-md text-gray-50 text-sm py-1 font-medium">
-                  Download CV
-                </button>
+                <Link to="#" onClick={() => redirectToExternalUrl(cvUrl)}>
+                  <button className="w-full bg-black rounded-md text-gray-50 text-sm py-1 font-medium">
+                    Download CV
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

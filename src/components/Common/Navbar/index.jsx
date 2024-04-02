@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { NavbarMobile } from "../NavbarMobile";
 import { MenuBarIcon } from "../../Icons";
+import { redirectToExternalUrl } from "../../../utils";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const cvUrl =
+    "https://drive.google.com/file/d/15XiXMJlkLfXVUfAOM-hVnE6XHQvjxyUu/view?usp=sharing";
 
   return (
     <div className="w-11/12 sm:w-10/12 mx-auto flex justify-between">
@@ -25,9 +29,11 @@ export const Navbar = () => {
           </button>
         </div>
         <div className="my-auto">
-          <button className="bg-black rounded-md px-3 text-gray-50 text-sm py-1 font-medium">
-            Download CV
-          </button>
+          <Link to="#" onClick={() => redirectToExternalUrl(cvUrl)}>
+            <button className="bg-black rounded-md px-3 text-gray-50 text-sm py-1 font-medium">
+              Download CV
+            </button>
+          </Link>
         </div>
       </div>
       <div className="sm:hidden relative my-auto">
