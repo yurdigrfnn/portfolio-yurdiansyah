@@ -56,12 +56,36 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
                 </button>
               </div>
             </Transition.Child>
-            <div className="flex shrink-0 items-center px-4"></div>
-            <div className="mt-5 flex flex-grow flex-col overflow-y-auto">
+            <div className="flex shrink-0 items-center px-4">
+              <h1 className="text-3xl inline-block bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-teal-600 to-blue-600 py-1">
+                {"{ ./y}"}
+              </h1>
+            </div>
+            <div className="mt-4">
               <nav
                 className="flex-1 space-y-1 bg-white px-4 py-2"
                 aria-label="Sidebar"
-              ></nav>
+              >
+                <div className="flex flex-col gap-2">
+                  <span className="text-lg text-gray-600 font-medium">
+                    About
+                  </span>
+                  <span className="text-lg text-gray-600 font-medium">
+                    Skills
+                  </span>
+                  <span className="text-lg text-gray-600 font-medium">
+                    Experience
+                  </span>
+                  <span className="text-lg text-gray-600 font-medium">
+                    Personal Project
+                  </span>
+                </div>
+              </nav>
+              <div className="w-full px-4 mt-3">
+                <button className="w-full bg-black rounded-md text-gray-50 text-sm py-1 font-medium">
+                  Download CV
+                </button>
+              </div>
             </div>
           </div>
         </Transition.Child>
