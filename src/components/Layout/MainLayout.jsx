@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "../Common/Navbar";
+import Footer from "../Common/Footer";
 
 export const MainLayout = () => {
   return (
-    <div className="dark:bg-gray-900 min-h-screen">
-      <Navbar />
-      <div className="pt-3">
-        <Outlet />
+    <div className="dark:bg-gray-900 min-h-screen flex justify-between flex-col">
+      <div className="">
+        <Navbar />
+        <div className="pt-3">
+          <Outlet />
+        </div>
       </div>
-      <div></div>
+      <Footer />
     </div>
   );
 };
