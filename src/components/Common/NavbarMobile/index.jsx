@@ -4,6 +4,7 @@ import React from "react";
 import { XCloseIcon } from "../../Icons";
 import { Link } from "react-router-dom";
 import { redirectToExternalUrl } from "../../../utils";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
   const cvUrl =
@@ -27,7 +28,7 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Dialog.Overlay className="fixed inset-0 bg-gray-400" />
+          <Dialog.Overlay className="fixed inset-0 bg-gray-400 dark:bg-gray-500" />
         </Transition.Child>
         <Transition.Child
           as={React.Fragment}
@@ -38,7 +39,7 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
           leaveFrom="translate-x-0"
           leaveTo="-translate-x-full"
         >
-          <div className="relative flex w-full flex-1 flex-col bg-white py-4">
+          <div className="relative flex w-full flex-1 flex-col bg-white dark:bg-gray-900 ">
             <Transition.Child
               as={React.Fragment}
               enter="ease-in-out duration-300"
@@ -61,37 +62,47 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
                 </button>
               </div>
             </Transition.Child>
-            <div className="flex shrink-0 items-center px-4">
-              <h1 className="text-3xl inline-block bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-teal-600 to-blue-600 py-1">
-                {"{ ./y}"}
-              </h1>
-            </div>
-            <div className="mt-4">
-              <nav
-                className="flex-1 space-y-1 bg-white px-4 py-2"
-                aria-label="Sidebar"
-              >
-                <div className="flex flex-col gap-2">
-                  <span className="text-lg text-gray-600 font-medium">
-                    About
-                  </span>
-                  <span className="text-lg text-gray-600 font-medium">
-                    Skills
-                  </span>
-                  <span className="text-lg text-gray-600 font-medium">
-                    Experience
-                  </span>
-                  <span className="text-lg text-gray-600 font-medium">
-                    Personal Project
-                  </span>
+            <div className="mt-4 flex flex-col gap-5">
+              <div className="flex justify-between px-4">
+                <div className="flex shrink-0 items-center ">
+                  <h1 className="text-3xl inline-block bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-teal-600 to-blue-600">
+                    {"{ ./y}"}
+                  </h1>
                 </div>
-              </nav>
-              <div className="w-full px-4 mt-3">
-                <Link to="#" onClick={() => redirectToExternalUrl(cvUrl)}>
-                  <button className="w-full bg-black rounded-md text-gray-50 text-sm py-1 font-medium">
-                    Download CV
-                  </button>
-                </Link>
+              </div>
+              <div className="border-t dark:border-gray-600 border-gray-300 ">
+                <nav
+                  className="flex-1 space-y-1 px-4 py-4"
+                  aria-label="Sidebar"
+                >
+                  <div className="flex flex-col gap-4">
+                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                      About
+                    </span>
+                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                      Skills
+                    </span>
+                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                      Experience
+                    </span>
+                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                      Personal Project
+                    </span>
+                  </div>
+                </nav>
+                <div className="w-full px-4 flex pt-4 gap-4 flex-col border-t dark:border-gray-600 border-gray-300">
+                  <div className="flex justify-between">
+                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                      Switch Theme
+                    </span>
+                    <ThemeSwitcher />
+                  </div>
+                  <Link to="#" onClick={() => redirectToExternalUrl(cvUrl)}>
+                    <button className="w-full bg-black dark:bg-white dark:text-black rounded-md text-gray-50 text-sm py-1 font-medium">
+                      Download CV
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
