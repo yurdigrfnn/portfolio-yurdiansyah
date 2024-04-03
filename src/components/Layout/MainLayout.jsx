@@ -3,11 +3,12 @@ import { Navbar } from "../Common/Navbar";
 
 export const MainLayout = () => {
   return (
-    <div className="pt-3">
+    <div className="dark:bg-gray-900 min-h-screen">
       <Navbar />
-      <div>
+      <div className="pt-3">
         <Outlet />
       </div>
+      <div></div>
     </div>
   );
 };
