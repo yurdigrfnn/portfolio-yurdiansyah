@@ -1,12 +1,10 @@
 import { MainLayout } from "../components/Layout";
+import { Home } from "../features/home";
 
 export const publicRoutes = [
   {
     path: "/",
     element: <MainLayout />,
-    children: [
-      { path: "/", element: <>p</> },
-      { path: "/about", element: <>h</> },
-    ],
+    children: [{ path: "/", element: <Home /> }],
   },
 ];
