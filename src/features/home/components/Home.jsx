@@ -58,7 +58,7 @@ export const Home = () => {
           <div className="flex flex-col gap-4 ">
             <span className="flex justify-center">
               <h2 className="dark:text-white bg-gray-400 dark:bg-gray-600 py-2 text-center my-auto px-6 rounded-xl text-sm font-medium">
-                get In touch
+                Skills
               </h2>
             </span>
             <span className="flex justify-center">
