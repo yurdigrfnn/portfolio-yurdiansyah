@@ -2,7 +2,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React from "react";
 import { XCloseIcon } from "../../Icons";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { redirectToExternalUrl } from "../../../utils";
 import ThemeSwitcher from "../ThemeSwitcher";
 
@@ -76,15 +76,48 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
                   aria-label="Sidebar"
                 >
                   <div className="flex flex-col gap-4">
-                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                    <Link
+                      onClick={() => {
+                        setSidebarOpen(false);
+                      }}
+                      activeClass="!text-blue-500"
+                      to="home"
+                      spy={true}
+                      smooth={true}
+                      offset={-60}
+                      duration={500}
+                      className="text-lg text-gray-600 dark:text-white font-medium hover:cursor-pointer"
+                    >
                       About
-                    </span>
-                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                    </Link>
+                    <Link
+                      onClick={() => {
+                        setSidebarOpen(false);
+                      }}
+                      activeClass="!text-blue-500"
+                      to="skills"
+                      spy={true}
+                      smooth={true}
+                      offset={-60}
+                      duration={500}
+                      className="text-lg text-gray-600 dark:text-white font-medium hover:cursor-pointer"
+                    >
                       Skills
-                    </span>
-                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                    </Link>
+                    <Link
+                      onClick={() => {
+                        setSidebarOpen(false);
+                      }}
+                      activeClass="!text-blue-500"
+                      to="experience"
+                      spy={true}
+                      smooth={true}
+                      offset={-60}
+                      duration={500}
+                      className="text-lg text-gray-600 dark:text-white font-medium hover:cursor-pointer"
+                    >
                       Experience
-                    </span>
+                    </Link>
                     <span className="text-lg text-gray-600 dark:text-white font-medium">
                       Personal Project
                     </span>
