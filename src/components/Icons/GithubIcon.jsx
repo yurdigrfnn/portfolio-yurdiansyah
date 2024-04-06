@@ -2,8 +2,8 @@
 export default function GithubIcon({ className }) {
   return (
     <svg
-      width="37"
-      height="36"
+      width="30"
+      height="30"
       viewBox="0 0 37 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

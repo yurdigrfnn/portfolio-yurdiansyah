@@ -4,6 +4,7 @@ import EmailIcon from "../../Icons/EmailIcon";
 import { Tooltip } from "react-tooltip";
 import PhoneIcon from "../../Icons/PhoneIcon";
 import GithubIcon from "../../Icons/GithubIcon";
+import LinkedInIcon from "../../Icons/LinkedInIcon";
 
 export default function Footer() {
   const [tooltipMessage, setTooltipMessage] = useState("");
@@ -89,13 +90,20 @@ export default function Footer() {
         <p className="dark:text-gray-300 text-center text-xl">
           You may also find me on these platforms!
         </p>
-        <div className="mt-2">
+        <div className="mt-2 flex gap-1">
           <a
             href="http://github.com/yurdigrfnn"
             target="_blank"
             rel="noopener noreferrer"
           >
             <GithubIcon className="dark:text-gray-300 " />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yurdigrfnn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon className="dark:text-gray-300 my-auto " />
           </a>
         </div>
       </div>

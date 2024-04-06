@@ -2,6 +2,7 @@ import GitIcon from "../../../components/Icons/GitIcon";
 import GithubIcon from "../../../components/Icons/GithubIcon";
 import JavaScriptIcon from "../../../components/Icons/JavaScriptIcon";
 import LaravelIcon from "../../../components/Icons/LaravelIcon";
+import LinkedInIcon from "../../../components/Icons/LinkedInIcon";
 import MysqlIcon from "../../../components/Icons/MysqlIcon";
 import NextJsIcon from "../../../components/Icons/NextJsIcon";
 import NodeIcon from "../../../components/Icons/NodeIcon";
@@ -40,13 +41,20 @@ export const Home = () => {
               <span className="ml-1 ">Avaiable For fulltime job</span>
             </span>
           </div>
-          <div className="mb-5">
+          <div className="mb-5 flex gap-1">
             <a
               href="http://github.com/yurdigrfnn"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GithubIcon className="dark:text-gray-300 " />
+              <GithubIcon className="dark:text-gray-300 my-auto" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yurdigrfnn/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon className="dark:text-gray-300 my-auto " />
             </a>
           </div>
         </div>
