@@ -16,7 +16,7 @@ export const Home = () => {
   return (
     <div>
       {/* Home page */}
-      <div>
+      <div id="home">
         <div className="mx-auto w-11/12 sm:w-10/12 mt-24 dark:text-gray-300">
           <h1 className="font-bold sm:text-6xl text-4xl">Hi,Im Yurdiansyah</h1>
           <p className="mt-5">
@@ -33,7 +33,7 @@ export const Home = () => {
               <PinIcon className="my-auto" />
               <span>Bogor, indonesia</span>
             </span>
-            <span className="flex gap-3 ">
+            <span className="flex gap-3">
               <span className="ml-1  w-3 h-3 rounded-full bg-green-600 my-auto relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
               </span>
@@ -51,9 +51,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
-
       {/* skils */}
-      <div className="dark:bg-gray-900 bg-gray-50">
+      <div id="skills" className="dark:bg-gray-900 bg-gray-50">
         <div className="mx-auto w-11/12 sm:w-10/12 py-16 sm:py-24 mt-24 dark:text-gray-300">
           <div className="flex flex-col gap-4 ">
             <span className="flex justify-center">
@@ -111,6 +110,38 @@ export const Home = () => {
             <div className="flex flex-col gap-2 items-center justify-center rounded-md">
               <GitIcon />
               <p>Git</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Experience */}
+      <div id="experience">
+        <div className="mx-auto w-11/12 sm:w-10/12 py-16 dark:text-gray-300">
+          <div className="flex flex-col gap-4 ">
+            <span className="flex justify-center">
+              <h2 className="dark:text-white bg-gray-400 dark:bg-gray-600 py-2 text-center my-auto px-6 rounded-xl text-sm font-medium">
+                Experience
+              </h2>
+            </span>
+            <span className="flex justify-center">
+              <p className="text-xl text-center">Recent experiences:</p>
+            </span>
+          </div>
+          <div className="mt-6 flex flex-col">
+            <div className="w-full dark:bg-gray-600 sm:flex-row justify-between shadow-lg flex gap-4 sm:gap-12 flex-col px-8 sm:px-12 py-8 bg-gray-100 rounded-lg">
+              <h1 className="text-2xl font-semibold">ART by Code</h1>
+              <p className="my-auto sm:hidden">Nov 2022 - Present</p>
+              <div>
+                <h3>Front End Developer</h3>
+                <ul className="list-disc ml-6 mt-4 ">
+                  <li>Developing CMS</li>
+                  <li>Crafting captivating and responsive websites</li>
+                  <li>Building dashboards</li>
+                </ul>
+              </div>
+              <p className="my-auto sm: mt-0 hidden sm:inline-block">
+                Nov 2022 - Present
+              </p>
             </div>
           </div>
         </div>
