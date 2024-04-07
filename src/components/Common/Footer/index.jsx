@@ -47,7 +47,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="py-16 dark:bg-gray-950 ">
+    <div className="py-16 dark:bg-gray-950 bg-gray-100">
       <div className="w-11/12 sm:w-10/12 mx-auto flex justify-center items-center flex-col">
         <h2 className="dark:text-white bg-gray-400 dark:bg-gray-600 py-2 text-center my-auto px-6 rounded-xl text-sm font-medium">
           get In touch

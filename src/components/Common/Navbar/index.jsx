@@ -48,7 +48,7 @@ export const Navbar = () => {
     <div
       className={`sticky top-0 ${
         isScrolled ? "sm:shadow-md" : ""
-      } dark:bg-black bg-white z-10 `}
+      } dark:bg-black bg-white z-20 `}
     >
       <div className="w-11/12 sm:w-10/12  mx-auto flex justify-between py-3">
         <div className="w-1/3 my-auto">
@@ -94,9 +94,9 @@ export const Navbar = () => {
               {" "}
               experience
             </Link>
-            <span className="text-lg text-gray-600 dark:text-white font-medium">
+            {/* <span className="text-lg text-gray-600 dark:text-white font-medium">
               Personal Project
-            </span>
+            </span> */}
           </nav>
           <div className="my-auto">
             <ThemeSwitcher />

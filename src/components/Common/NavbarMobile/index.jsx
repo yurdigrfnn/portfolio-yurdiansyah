@@ -118,9 +118,9 @@ export const NavbarMobile = ({ sidebarOpen, setSidebarOpen }) => {
                     >
                       Experience
                     </Link>
-                    <span className="text-lg text-gray-600 dark:text-white font-medium">
+                    {/* <span className="text-lg text-gray-600 dark:text-white font-medium">
                       Personal Project
-                    </span>
+                    </span> */}
                   </div>
                 </nav>
                 <div className="w-full px-4 flex pt-4 gap-4 flex-col border-t dark:border-gray-600 border-gray-300">

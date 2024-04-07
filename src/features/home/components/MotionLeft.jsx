@@ -32,13 +32,13 @@ export default function MotionLeft({ children }) {
       <motion.div
         id="home"
         variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
+          hidden: { right: "0%" },
+          visible: { right: "100%" },
         }}
         initial="hidden"
         animate={slideControl}
         transition={{ duration: 0.5, ease: "easeIn" }}
-        className="absolute left-0 right-0 top-1 rounded-md bottom-1 z-20 bg-blue-400"
+        className="absolute left-0 right-0 top-1 rounded-md bottom-1 z-10 bg-blue-400"
       ></motion.div>
     </div>
   );
