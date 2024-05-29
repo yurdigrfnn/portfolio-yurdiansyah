@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const cvUrl =
-    "https://drive.google.com/file/d/15XiXMJlkLfXVUfAOM-hVnE6XHQvjxyUu/view?usp=sharing";
+    "https://drive.google.com/file/d/1P_rMyWIzR0VukfAs1r1WZ9kXzRoCOTpY/view?usp=sharing";
 
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
